@@ -20,7 +20,13 @@ public class DaoEmpleadoOficina implements IOperaciones{
     public void agregarRegistro(Object registro) {
         emp.add((EmpleadoOficina)registro);
     }
-
+    
+    public void agregarRegistro(String apellidos, double horasExtras, int id, 
+            String nombre, double salarioBase) {
+        emp.add(new EmpleadoOficina(apellidos, 
+                horasExtras, id, nombre, salarioBase));
+    }
+    
     @Override
     public void mostrarRegistros() {
         for (EmpleadoOficina e : emp){
